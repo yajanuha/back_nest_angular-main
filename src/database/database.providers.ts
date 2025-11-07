@@ -11,7 +11,7 @@ export const databaseProviders = [
         host: config.get('HOST') || 'localhost',
         port: +config.get('PORT') || 5432,
         username: config.get('USERNAME') || 'root',
-        password: config.get('PASSWORD') || '199723',
+        password: config.get('PASSWORD') || '199723', // tu versión correcta
         database: config.get('DATABASE'),
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
       });

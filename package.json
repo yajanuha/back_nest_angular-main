@@ -20,8 +20,14 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "typeorm-ts-node-commonjs",
     "migration:generate": "npm run typeorm migration:generate ./src/database/migrations/%npm_config_name% -- -d typeorm.config.ts",
+<<<<<<< HEAD
     "migration:run": "npm run typeorm migration:run -- -d typeorm.config.ts",
     "migration:revert": "npm run typeorm migration:revert -- -d typeorm.config.ts"
+=======
+    "migration:run":"npm run typeorm migration:run -- -d typeorm.config.ts",
+    "migration:revert":"npm run typeorm migration:revert -- -d typeorm.config.ts"
+
+>>>>>>> 998d089ae9ca5c2fa33cbfb4526980c3d575a00b
   },
   "dependencies": {
     "@nestjs/common": "^11.1.6",
@@ -51,7 +57,11 @@
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.0",
     "@types/jest": "^30.0.0",
+<<<<<<< HEAD
     "@types/node": "^22.19.0",
+=======
+    "@types/node": "^22.18.12",
+>>>>>>> 998d089ae9ca5c2fa33cbfb4526980c3d575a00b
     "@types/passport-jwt": "^4.0.1",
     "@types/supertest": "^6.0.2",
     "eslint": "^9.18.0",

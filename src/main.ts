@@ -5,22 +5,24 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  //habilitamos CORS
+  
+  // habilitamos CORS
   app.enableCors();
 
-  //class validator
+  // class validator
   app.useGlobalPipes(new ValidationPipe());
 
-
-  //swagger
-   const config = new DocumentBuilder()
+  // swagger
+  const config = new DocumentBuilder()
     .setTitle('Cats example')
     .setDescription('The cats API description')
     .setVersion('1.0')
     .addTag('cats')
     .build();
+
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, documentFactory);
-  await app.listen( 3000);
+
+  await app.listen(3000);
 }
 bootstrap();
